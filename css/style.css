@@ -1,0 +1,206 @@
+.box {
+  background-color: #ffed00;
+  width: 1920px;
+  height: 920px;
+  position: relative; /* 내부 이미지 배치를 위한 기준 */
+}
+
+.tick1,
+.tick2,
+.boom,
+.bg,
+.oval,
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.pattern,
+.monitor,
+.computer,
+.frame,
+.note,
+.chair,
+.piano {
+  display: none; /* 초기에는 모든 추가 이미지를 숨김 */
+}
+
+/* 이미지 배치 */
+.tick1 {
+  position: absolute;
+  top: 218px;
+  left: 681px;
+  width: 243px;
+  height: 100px;
+  background: url("../tick1.png") no-repeat;
+  background-size: cover;
+}
+
+.tick2 {
+  position: absolute;
+  top: 328px;
+  left: 601px;
+  width: 311px;
+  height: 100px;
+  background: url("../tick2.png") no-repeat;
+  background-size: cover;
+}
+
+.boom {
+  position: absolute;
+  top: 200px;
+  left: 548px;
+  width: 823px;
+  height: 559px;
+  background: url("../BOOM.png") no-repeat;
+  background-size: cover;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 920px;
+  background: url("../bg.png") no-repeat;
+  background-size: cover;
+}
+
+.text1 {
+  position: absolute;
+  top: 18px;
+  left: 810px;
+  width: 300px;
+  height: 58px;
+  background: url("../text1.png") no-repeat;
+  background-size: cover;
+}
+
+.text2 {
+  position: absolute;
+  top: 297px;
+  left: 764px;
+  width: 392px;
+  height: 117px;
+  background: url("../text2.png") no-repeat;
+  background-size: cover;
+}
+
+.text3 {
+  position: absolute;
+  top: 378px;
+  left: 590px;
+  width: 740px;
+  height: 201px;
+  background: url("../text3.png") no-repeat;
+  background-size: cover;
+}
+
+.text4 {
+  position: absolute;
+  top: 585px;
+  left: 587px;
+  width: 745px;
+  height: 67px;
+  background: url("../text4.png") no-repeat;
+  background-size: cover;
+}
+
+.text5 {
+  position: absolute;
+  top: 821px;
+  left: 204px;
+  width: 1512px;
+  height: 82px;
+  background: url("../text5.png") no-repeat;
+  background-size: cover;
+}
+
+.oval {
+  position: absolute;
+  top: 264px;
+  left: 508px;
+  width: 904px;
+  height: 436px;
+  background: url("../oval.png") no-repeat;
+  background-size: cover;
+}
+
+.pattern {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 920px;
+  background: url("../pattern.png") no-repeat;
+  background-size: cover;
+}
+
+.computer {
+  position: absolute;
+  top: 45px;
+  left: 518px;
+  width: 510px;
+  height: 465px;
+  background: url("../computer.png") no-repeat;
+  background-size: cover;
+}
+
+.monitor {
+  position: absolute;
+  top: 82px;
+  left: 606px;
+  width: 258px;
+  height: 188px;
+  background: url("../monitor.png") no-repeat;
+  background-size: cover;
+}
+
+.frame {
+  position: absolute;
+  top: 295px;
+  left: 396px;
+  width: 158px;
+  height: 179px;
+  background: url("../frame.png") no-repeat;
+  background-size: cover;
+}
+
+.note {
+  position: absolute;
+  top: 445px;
+  left: 84px;
+  width: 594px;
+  height: 178px;
+  background: url("../note.png") no-repeat;
+  background-size: cover;
+}
+
+.chair {
+  position: absolute;
+  top: 492px;
+  left: 772px;
+  width: 1048px;
+  height: 428px;
+  background: url("../chair.png") no-repeat;
+  background-size: cover;
+}
+
+.piano {
+  position: absolute;
+  top: 590px;
+  left: 0px;
+  width: 1262px;
+  height: 330px;
+  background: url("../piano.png") no-repeat;
+  background-size: cover;
+}
+
+/* Hover 및 클릭 애니메이션용 스타일 추가 */
+.interactive {
+  transition: transform 0.5s ease; /* 크기 변경 애니메이션 */
+}
+
+.hidden {
+  display: none; /* 클릭 시 숨길 때 사용 */
+}
