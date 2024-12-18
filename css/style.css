@@ -1,8 +1,42 @@
-.box {
-  background-color: #ffed00;
+body {
   width: 1920px;
   height: 920px;
+  margin: 0; /* 여백 제거 */
+  padding: 0; /* 여백 제거 */
+  overflow: hidden; /* 화면 밖으로 나가는 요소 숨김 */
+  position: relative;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+.box {
+  background-color: #ffed00;
+  width: 1920px; /* 고정된 가로 크기 */
+  height: 920px; /* 고정된 세로 크기 */
   position: relative; /* 내부 이미지 배치를 위한 기준 */
+  overflow: hidden; /* 화면 밖으로 나가는 요소를 잘라냄 */
+  margin: 0 auto; /* 화면 중앙 정렬 (선택 사항) */
+}
+
+.center-circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 0.5s infinite alternate; /* 크기 변화 애니메이션 */
+}
+
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1); /* 원래 크기 */
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0.88); /* 23x23 크기로 줄어듦 */
+  }
 }
 
 .tick1,
@@ -200,6 +234,64 @@
 .interactive {
   transition: transform 0.5s ease; /* 크기 변경 애니메이션 */
 }
+
+.hidden {
+  display: none; /* 클릭 시 숨길 때 사용 */
+}
+
+/* 추가된 t1~t5의 초기 상태 */
+.t1,
+.t2,
+.t3,
+.t4,
+.t5 {
+  position: absolute;
+  top: 772px;
+  left: 435px;
+  display: none; /* 초기 상태에서 숨김 */
+  background-size: cover;
+}
+
+.t1 {
+  width: 473px;
+  height: 45px;
+  top: 772px;
+  left: 772px;
+  background: url("../t1.png") no-repeat;
+}
+
+.t2 {
+  width: 934px;
+  height: 45px;
+  top: 772px;
+  left: 489px;
+  background: url("../t2.png") no-repeat;
+}
+
+.t3 {
+  width: 973px;
+  height: 42px;
+  top: 772px;
+  left: 469px;
+  background: url("../t3.png") no-repeat;
+}
+
+.t4 {
+  width: 1007px;
+  height: 42px;
+  top: 772px;
+  left: 435px;
+  background: url("../t4.png") no-repeat;
+}
+
+.t5 {
+  width: 406px;
+  height: 45px;
+  top: 772px;
+  left: 753px;
+  background: url("../t5.png") no-repeat;
+}
+
 
 .hidden {
   display: none; /* 클릭 시 숨길 때 사용 */
