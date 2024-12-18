@@ -118,15 +118,7 @@ $(document).ready(function () {
     );
   }
 
-  $(".computer, .monitor").hover(
-    function () {
-      $(".t1").fadeIn();
-    },
-    function () {
-      $(".t1").fadeOut();
-    }
-  );
-
+  setupHover(".computer", ".t1");
   setupHover(".frame", ".t2");
   setupHover(".note", ".t3");
   setupHover(".piano", ".t4");
