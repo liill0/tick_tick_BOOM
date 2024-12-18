@@ -2,12 +2,17 @@ $(document).ready(function () {
   let clickCount = 0;
   let text3Toggle = true; // text3 상태를 저장하는 변수
 
+  // 초기 원이 나타나도록 설정
+  $(".box").append('<div class="center-circle"></div>');
+
   // 클릭 이벤트 등록
   $(".box").on("click", function () {
     clickCount++;
 
     if (clickCount === 1) {
-      $(".tick1").fadeIn(); // tick1 표시
+      // 초기 원 숨김 및 tick1 표시
+      $(".center-circle").remove();
+      $(".tick1").fadeIn();
     } else if (clickCount === 2) {
       $(".tick2").fadeIn(); // tick2 표시
     } else if (clickCount === 3) {
@@ -115,4 +120,31 @@ $(document).ready(function () {
     }
     text3Toggle = !text3Toggle; // 상태 토글
   });
+  // 마우스 hover 이벤트에 따른 이미지 표시/숨김
+  function setupHover(selector, target) {
+    $(selector).hover(
+      function () {
+        $(target).fadeIn(); // 마우스가 닿으면 나타나기
+      },
+      function () {
+        $(target).fadeOut(); // 마우스를 떼면 사라지기
+      }
+    );
+  }
+
+  // computer와 monitor는 동시에 처리
+  $(".computer, .monitor").hover(
+    function () {
+      $(".t1").fadeIn();
+    },
+    function () {
+      $(".t1").fadeOut();
+    }
+  );
+
+  // 나머지 개별 hover 처리
+  setupHover(".frame", ".t2");
+  setupHover(".note", ".t3");
+  setupHover(".piano", ".t4");
+  setupHover(".chair", ".t5");
 });
