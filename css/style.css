@@ -11,11 +11,11 @@ body {
 }
 .box {
   background-color: #ffed00;
-  width: 1920px; /* 고정된 가로 크기 */
-  height: 920px; /* 고정된 세로 크기 */
-  position: relative; /* 내부 이미지 배치를 위한 기준 */
-  overflow: hidden; /* 화면 밖으로 나가는 요소를 잘라냄 */
-  margin: 0 auto; /* 화면 중앙 정렬 (선택 사항) */
+  width: 1920px;
+  height: 920px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .center-circle {
@@ -27,15 +27,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: pulse 0.5s infinite alternate; /* 크기 변화 애니메이션 */
+  animation: pulse 0.5s infinite alternate;
 }
 
 @keyframes pulse {
   from {
-    transform: translate(-50%, -50%) scale(1); /* 원래 크기 */
+    transform: translate(-50%, -50%) scale(1);
   }
   to {
-    transform: translate(-50%, -50%) scale(0.88); /* 23x23 크기로 줄어듦 */
+    transform: translate(-50%, -50%) scale(0.88);
   }
 }
 
@@ -56,10 +56,9 @@ body {
 .note,
 .chair,
 .piano {
-  display: none; /* 초기에는 모든 추가 이미지를 숨김 */
+  display: none;
 }
 
-/* 이미지 배치 */
 .tick1 {
   position: absolute;
   top: 218px;
@@ -230,16 +229,14 @@ body {
   background-size: cover;
 }
 
-/* Hover 및 클릭 애니메이션용 스타일 추가 */
 .interactive {
-  transition: transform 0.5s ease; /* 크기 변경 애니메이션 */
+  transition: transform 0.5s ease;
 }
 
 .hidden {
-  display: none; /* 클릭 시 숨길 때 사용 */
+  display: none;
 }
 
-/* 추가된 t1~t5의 초기 상태 */
 .t1,
 .t2,
 .t3,
@@ -248,7 +245,7 @@ body {
   position: absolute;
   top: 772px;
   left: 435px;
-  display: none; /* 초기 상태에서 숨김 */
+  display: none;
   background-size: cover;
 }
 
@@ -290,9 +287,4 @@ body {
   top: 772px;
   left: 753px;
   background: url("../t5.png") no-repeat;
-}
-
-
-.hidden {
-  display: none; /* 클릭 시 숨길 때 사용 */
 }
